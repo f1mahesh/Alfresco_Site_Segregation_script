@@ -1,0 +1,14 @@
+--## Solr validation query
+
+"q":"PATH:'/app:company_home/st:sites/cm:lilly//*'",
+"facet.pivot":"TYPE,sd:documentStatus,sd:commonDocumentCategory,sd:documentLevel",
+
+
+Validation : make sure all the counts match with existing solr.
+
+
+Prod Solr URL:
+http://172.60.1.64:8983/solr/alfresco-0/select?facet=on&facet.pivot=TYPE,sd:documentStatus,sd:commonDocumentCategory,sd:documentLevel&indent=on&shards=http%3A%2F%2F172.60.1.64%3A8983%2Fsolr%2Falfresco-0%2Chttp%3A%2F%2F172.60.2.245%3A8983%2Fsolr%2Falfresco-1%2Chttp%3A%2F%2F172.60.1.160%3A8983%2Fsolr%2Falfresco-2%2Chttp%3A%2F%2F172.60.2.122%3A8983%2Fsolr%2Falfresco-3%2Chttp%3A%2F%2F172.60.1.219%3A8983%2Fsolr%2Falfresco-4%2Chttp%3A%2F%2F172.60.2.157%3A8983%2Fsolr%2Falfresco-5%2Chttp%3A%2F%2F172.60.1.251%3A8983%2Fsolr%2Falfresco-6%2Chttp%3A%2F%2F172.60.2.196%3A8983%2Fsolr%2Falfresco-7%2Chttp%3A%2F%2F172.60.1.179%3A8983%2Fsolr%2Falfresco-8%2Chttp%3A%2F%2F172.60.2.225%3A8983%2Fsolr%2Falfresco-9%2Chttp%3A%2F%2F172.60.1.17%3A8983%2Fsolr%2Falfresco-10%2Chttp%3A%2F%2F172.60.2.19%3A8983%2Fsolr%2Falfresco-11&rows=100&wt=json&q=PATH%3A%27%2Fapp%3Acompany_home%2Fst%3Asites%2Fcm%3Apfizer%2F%2F*%27
+
+Seg Prod Solr URL:
+http://172.60.1.95:8983/solr/alfresco-0/select?facet=on&facet.pivot=TYPE,sd:documentStatus,sd:commonDocumentCategory,sd:documentLevel&indent=on&shards=http%3A%2F%2F172.60.1.95%3A8983%2Fsolr%2Falfresco-0&rows=100&wt=json&q=PATH%3A%27%2Fapp%3Acompany_home%2Fst%3Asites%2Fcm%3Apfizer%2F%2F*%27
